@@ -1,0 +1,28 @@
+:root {
+  --orange: #F78700;
+  --blue: #0041B4;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .numpad_btn{
+    @apply shadow-[0px_1px_0px_0px_#fff6af] min-h-[70px] bg-[#ffec64] border inline-block cursor-pointer text-[#333333] text-lg font-bold no-underline rounded-md border-solid border-[#ffaa22] hover:bg-[#ffab23] active:relative active:top-px;
+    box-shadow:inset 0px 1px 0px 0px #fce2c1;
+    background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+    background-color:#ffc477;
+    border-radius: 10px;
+    border:1px solid #eeb44f;
+  }
+  .numpad_btn:active {
+    background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+	  background-color:#fb9e25;
+    position:relative;
+	  top:1px;
+  }
+  .numpad_enter{
+    @apply h-auto text-blue-500;
+  }
+}

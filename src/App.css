@@ -1,0 +1,35 @@
+html,body{
+  overflow: hidden;
+}
+body{
+  background: #FEE6BE;
+}
+
+header::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  background: #393331;
+  left: 0;
+  top: 59px;
+  border-radius: 0 0 100% 100%;
+  z-index: 0;
+}
+
+.inputPanel{
+  width: 95%;
+  height: 150px;
+  margin: 0 auto;
+  background: url(./assets/inputBg.png) center center no-repeat;
+  background-size: contain;
+}
+.numpadBtnBg{
+  background: url(./assets/btnBg.png) center center no-repeat;
+  background-size: contain;
+}
+
+.section_bg{
+  background: #ffdb8d;
+  /* background: linear-gradient(90deg, rgba(214,152,64,1) 0%, rgba(241,171,65,1) 50%, rgba(228,203,168,1) 100%); */
+}
