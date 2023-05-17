@@ -30,7 +30,7 @@ const Result = (props: {inputValue: string, unit: taxRuleType}) => {
   }, [result]);
 
   function numberCommaToFixed(num: number, nofix:boolean = false){
-    let comma=/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g
+    let comma = new RegExp('\\B(?<!\\.\\d*)(?=(\\d{3})+(?!\\d))', 'g')
     if (nofix === true){
       return num.toString().replace(comma, ',')
     }else{
