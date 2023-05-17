@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React,{ useEffect, useMemo } from "react";
 import { ContextStore } from "../App";
 import { taxRuleType, ruleType } from "../taxRule";

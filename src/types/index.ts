@@ -1,4 +1,3 @@
 export interface supportCurrency {
-  USD: number;
-  JPY: number;
+  [index: string]: number;
 }
