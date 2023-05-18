@@ -28,7 +28,7 @@ function App() {
     localStorage.setItem("currency", JSON.stringify(data));
   }
   return (
-    <div className="text-center w-[390px] mx-auto">
+    <div className="text-center w-full max-w-[390px] mx-auto">
       <Header />
       <ContextStore.Provider value={currency}>
         <InputMoney />

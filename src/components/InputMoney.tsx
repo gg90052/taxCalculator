@@ -70,14 +70,16 @@ const InputMoney = () => {
           <div className="text-sm mt-4">{targetUnit.name}</div>
         </div>
       </div>
-      <div className={showNumpad ? '':'hidden'}>
-        <Numpad onNumPadClick={ numPadInput } />
-      </div>
-      <div className={showResult ? '':'hidden'}>
-        <Result inputValue={ inputValue } unit={ targetUnit } />
-      </div>
-      <div className={showUnitSelect ? '':'hidden'}>
-        <UnitSelect onSetUnit={ unitChangeHandler } />
+      <div className="overflowContainer">
+        <div className={showNumpad ? '':'hidden'}>
+          <Numpad onNumPadClick={ numPadInput } />
+        </div>
+        <div className={showResult ? '':'hidden'}>
+          <Result inputValue={ inputValue } unit={ targetUnit } />
+        </div>
+        <div className={showUnitSelect ? '':'hidden'}>
+          <UnitSelect onSetUnit={ unitChangeHandler } />
+        </div>
       </div>
     </>
   );
