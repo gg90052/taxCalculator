@@ -29,14 +29,21 @@ const Result = (props: {inputValue: string, unit: taxRuleType}) => {
     setSave(Number(inputValue) - Number(result));
   }, [result]);
 
-  function numberCommaToFixed(num: number, nofix:boolean = false){
-    let comma = new RegExp('\\B(?<!\\.\\d*)(?=(\\d{3})+(?!\\d))', 'g')
-    if (nofix === true){
-      return num.toString().replace(comma, ',')
-    }else{
-      return num.toFixed(2).toString().replace(comma, ',')
+  function numberCommaToFixed(ori_num: number, nofix:boolean = false){
+    // safari not support negative lookbehind
+    // let comma = new RegExp('\\B(?<!\\.\\d*)(?=(\\d{3})+(?!\\d))', 'g')
+    // if (nofix === true){
+    //   return num.toString().replace(comma, ',')
+    // }else{
+    //   return num.toFixed(2).toString().replace(comma, ',')
+    // }
+    let num:string = ori_num.toString();
+    if (nofix === false){
+      num = ori_num.toFixed(2);
     }
-    
+    const sep = num.split('.');
+    const addComma = Number(sep[0]).toLocaleString('en');
+    return sep.length > 1 ? addComma + '.' + sep[1] : addComma;
   }
   return (
     <>
